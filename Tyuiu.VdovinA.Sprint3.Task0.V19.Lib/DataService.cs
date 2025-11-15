@@ -15,7 +15,6 @@ namespace Tyuiu.VdovinA.Sprint3.Task0.V19.Lib
                 double denominator = cosValue + 2;
                 double term = 1 / denominator;
                 sum += term;
-
             }
 
             return Math.Round(sum, 3);

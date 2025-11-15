@@ -11,7 +11,9 @@ namespace Tyuiu.VdovinA.Sprint3.Task0.V19.Lib
 
             for (int k = startValue; k <= stopValue; k++)
             {
-                double term = 1 / (Math.Cos(k) + 2);
+                double cosValue = Math.Cos(k);
+                double denominator = cosValue + 2;
+                double term = 1 / denominator;
                 sum += term;
             }
 

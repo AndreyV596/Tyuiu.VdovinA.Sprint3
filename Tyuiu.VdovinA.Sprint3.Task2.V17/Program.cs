@@ -24,27 +24,19 @@ namespace Tyuiu.VdovinA.Sprint3.Task2.V17
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                        *");
 
-            int z = 1;
-            Console.WriteLine($"Значение z = {z}");
+            int startValue = 1;
+            int stopValue = 10;
+
+            Console.WriteLine($"Старт шага = {startValue}");
+            Console.WriteLine($"Конец шага = {stopValue}");
+            Console.WriteLine($"z = 2");
 
             Console.WriteLine("***************************************************************************");
             Console.WriteLine("* РЕЗУЛЬТАТ:                                                              *");
             Console.WriteLine("***************************************************************************");
 
-            double result = ds.GetSumSeries(z);
+            double result = ds.GetSumSeries(startValue, stopValue);
             Console.WriteLine($"Сумма ряда = {result:F3}");
-
-            // Дополнительная информация для отладки
-            Console.WriteLine("\nДетали вычислений для z = 1:");
-            double debugSum = 0;
-            for (int k = 1; k <= 10; k++)
-            {
-                double term = 1.0 / (Math.Cos(k) + z);
-                double squaredTerm = Math.Pow(term, 2);
-                debugSum += squaredTerm;
-                Console.WriteLine($"k = {k}: cos({k}) = {Math.Cos(k):F3}, член ряда = {squaredTerm:F6}");
-            }
-            Console.WriteLine($"Итоговая сумма: {debugSum:F3}");
 
             Console.ReadKey();
         }
